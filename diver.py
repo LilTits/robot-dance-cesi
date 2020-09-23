@@ -15,9 +15,9 @@ poppy.m6.compliant = False
 
 # Position : Diver
 def position_diver():
-    poppy.m2.goal_position = 0
-    poppy.m3.goal_position = 0
-    poppy.m5.goal_position = 0
+    poppy.m2.goto_position(-45, 0.3)
+    poppy.m3.goto_position(60, 0.3)
+    poppy.m5.goto_position(-70, 0.3, wait=True)
     poppy.m6.goal_position = 0
     
 position_diver()
