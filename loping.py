@@ -1,4 +1,5 @@
 from pypot.creatures import PoppyErgoJr
+import time
 poppy = PoppyErgoJr(
     simulator='vrep', 
     scene='poppy_ergo_jr_holder.ttt', 
