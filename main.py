@@ -95,3 +95,12 @@ def position_custom_2():
         i = i + 1
         
 #custom 3
+def Custom3() :
+    poppy.m3.goto_position(0, 4, wait=True)
+    poppy.m2.goto_position(0, 4, wait=True)
+    poppy.m5.goto_position(-90, 4, wait=True)
+    poppy.m4.goto_position(1440, 6)
+    for i in range(3) :
+        
+        poppy.m3.goto_position(-90, 1, wait=True)
+        poppy.m3.goto_position(90, 1, wait=True)
