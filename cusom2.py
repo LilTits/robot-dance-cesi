@@ -13,7 +13,7 @@ poppy.m4.compliant = False
 poppy.m5.compliant = False
 poppy.m6.compliant = False
 
-# Position : Diver
+# Position : custom 2
 def position_custom_2():
     i = 0
     while i < 3:
