@@ -56,7 +56,21 @@ def shaker() :
     poppy.m5.goto_position(0, 1.5, wait=True)
         
 #routine imposée 3 - looping
-
+def looping():
+    #Initial
+    poppy.m1.goto_position(-180,1, wait=True)
+    poppy.m4.goto_position(-180,1, wait=True)
+    poppy.m5.goto_position(90,1, wait=True)
+    poppy.m2.goto_position(90,1, wait=True)
+    poppy.m3.goto_position(0,1, wait=True)
+    poppy.m6.goto_position(0,0)
+    #Final
+    poppy.m1.goto_position(-180,1)
+    poppy.m4.goto_position(-180,1)
+    poppy.m5.goto_position(-90,1)
+    poppy.m2.goto_position(0,1)
+    poppy.m3.goto_position(90,1)
+    poppy.m6.goto_position(0,0)
 
 #custom 1
 def custom1():
@@ -119,6 +133,8 @@ diver()
 print("diver done")
 custom1()
 print("custom 1 done")
+looping()
+print("looping done")
 start_stop()
 end = time.time()
 print(end - start)
