@@ -6,6 +6,8 @@ poppy = PoppyErgoJr(
     camera='dummy'
     )
 
+#######################################################
+
 # Position : Start and stop
 def start_stop():
     poppy.m1.goal_position = 0
@@ -14,6 +16,8 @@ def start_stop():
     poppy.m4.goal_position = 0
     poppy.m5.goal_position = 0
     poppy.m6.goal_position = 0
+    
+#######################################################
 
 #position imposée 1 - reverse
 def reverse() :
@@ -23,12 +27,12 @@ def reverse() :
     
 #position imposée 2 - skywatching
 def skywatching():
-    poppy.m1.goto_position(0,2)
-    poppy.m2.goto_position(0,2)
-    poppy.m3.goto_position(0,2)
-    poppy.m4.goto_position(0,2)
-    poppy.m6.goto_position(0,2, wait=True)
-    poppy.m5.goto_position(-90,0.1)
+    poppy.m1.goto_position(0, 2)
+    poppy.m2.goto_position(0, 2)
+    poppy.m3.goto_position(0, 2)
+    poppy.m4.goto_position(0, 2)
+    poppy.m6.goto_position(0, 2, wait=True)
+    poppy.m5.goto_position(-90, 0.1)
     
 #position imposée 3 - diver
 def diver():
@@ -36,6 +40,8 @@ def diver():
     poppy.m3.goto_position(60, 2)
     poppy.m5.goto_position(-70, 2, wait=True)
     poppy.m6.goal_position = 0
+    
+#######################################################
     
 #routine imposée 1 - balai-brosse
 def broom() :
@@ -58,47 +64,46 @@ def shaker() :
 #routine imposée 3 - looping
 def looping():
     #Initial
-    poppy.m1.goto_position(-180,1, wait=True)
-    poppy.m4.goto_position(-180,1, wait=True)
-    poppy.m5.goto_position(90,1, wait=True)
-    poppy.m2.goto_position(90,1, wait=True)
-    poppy.m3.goto_position(0,1, wait=True)
-    poppy.m6.goto_position(0,0)
+    poppy.m1.goto_position(-180, 1, wait=True)
+    poppy.m4.goto_position(-180, 1, wait=True)
+    poppy.m5.goto_position(90, 1, wait=True)
+    poppy.m2.goto_position(90, 1, wait=True)
+    poppy.m3.goto_position(0, 1, wait=True)
+    poppy.m6.goto_position(0, 0)
     #Final
-    poppy.m1.goto_position(-180,1)
-    poppy.m4.goto_position(-180,1)
-    poppy.m5.goto_position(-90,1)
-    poppy.m2.goto_position(0,1)
-    poppy.m3.goto_position(90,1)
-    poppy.m6.goto_position(0,0)
+    poppy.m1.goto_position(-180, 1)
+    poppy.m4.goto_position(-180, 1)
+    poppy.m5.goto_position(-90, 1)
+    poppy.m2.goto_position(0, 1)
+    poppy.m3.goto_position(90, 1)
+    poppy.m6.goto_position(0, 0)
+    
+#######################################################
 
 #custom 1
 def custom1():
-    poppy.m2.goto_position(0,0.5)
-    poppy.m3.goto_position(0,0.5)
-    poppy.m4.goto_position(0,0.5)
-    poppy.m5.goto_position(0,0.5)
-    poppy.m6.goto_position(0,0.5)
-    poppy.m1.goto_position(90,2, wait=True)
-    poppy.m1.goto_position(-90,1, wait=True)
-    poppy.m4.goto_position(90,1)
-    poppy.m2.goto_position(90,1)
-    poppy.m1.goto_position(90,2, wait=True)
-    poppy.m2.goto_position(-90,2)
-    poppy.m4.goto_position(-90,2)
-    poppy.m1.goto_position(180,2, wait=True)
+    poppy.m2.goto_position(0, 0.5)
+    poppy.m3.goto_position(0, 0.5)
+    poppy.m4.goto_position(0, 0.5)
+    poppy.m5.goto_position(0, 0.5)
+    poppy.m6.goto_position(0, 0.5)
+    poppy.m1.goto_position(90, 2, wait=True)
+    poppy.m1.goto_position(-90, 1, wait=True)
+    poppy.m4.goto_position(90, 1)
+    poppy.m2.goto_position(90, 1)
+    poppy.m1.goto_position(90, 2, wait=True)
+    poppy.m2.goto_position(-90, 2)
+    poppy.m4.goto_position(-90, 2)
+    poppy.m1.goto_position(180, 2, wait=True)
 
 #custom 2
 def custom2():
     poppy.m1.goto_position(-180, 2, wait=True)
     poppy.m1.goto_position(180, 2)
-    
     poppy.m2.goto_position(-70, 2, wait=True)
     poppy.m2.goto_position(-25, 2)
-    
     poppy.m3.goto_position(70, 2, wait=True)
     poppy.m3.goto_position(50, 2)
-    
     poppy.m5.goto_position(-80, 2, wait=True)
     poppy.m5.goto_position(-60, 2)
         
@@ -109,11 +114,11 @@ def custom3() :
     poppy.m4.goto_position(720, 3)
     poppy.m3.goto_position(-90, 1.5, wait=True)
     poppy.m3.goto_position(90, 1.5, wait=True)
-        
+
+#######################################################
         
         
 #function calls
-
 start = time.time()
 start_stop()
 print("hello")
